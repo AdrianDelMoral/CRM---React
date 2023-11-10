@@ -1,6 +1,7 @@
 // Permite navegar de forma programada, para que cuando se pulse un botón o después de pasar una validación poder navegar a otra página
-import { useNavigate, Form } from "react-router-dom"
+import { useNavigate, Form, useActionData } from "react-router-dom"
 import Formulario from '../components/Formulario'
+import Error from "../components/Error"
 
 export async function action({request}) {
   const formData = await request.formData()
@@ -9,14 +10,33 @@ export async function action({request}) {
 
   const datos = Object.fromEntries(formData)
 
-  console.log(datos);
+  const errores = []
 
-  return null
+  if (Object.values(datos).includes('')) {
+    errores.push('Todos los campos son Obligatorios')
+  }
+
+  // Retornar datos si hay errores
+  if(Object.keys(errores).length) {
+    // console.log('Si hay errores');
+    // console.log(Object.keys(errores)); // Si hay errores, nos devolverá un array de 0 ya que no hay nada escrito aún
+
+    return errores
+  }
+
+
 }
 
 function NuevoCliente() {
+
+  // Action
+  const errores = useActionData()
   
+  // Loader
   const navigate = useNavigate()
+
+  // Nos dirá los errores que hay
+  // console.log(errores);
 
   return (
     <>
@@ -32,6 +52,8 @@ function NuevoCliente() {
       </div>
 
       <div className="bg-white shadow rounded-md md:w-3/4 mx-auto px-5 py-10 mt-5">
+
+        {errores?.length && errores.map((error, i) => <Error key={i}>{error}</Error>)}
 
         <Form
           method='post'
