@@ -10,10 +10,19 @@ export async function action({request}) {
 
   const datos = Object.fromEntries(formData)
 
+  const email = formData.get('email')
+
   const errores = []
 
   if (Object.values(datos).includes('')) {
     errores.push('Todos los campos son Obligatorios')
+  }
+  
+  // Validar que el email tenga un formato válido
+  let regex = new RegExp("([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])");
+
+  if(!regex.test(email)) {
+    errores.push('El email no es Válido')
   }
 
   // Retornar datos si hay errores
@@ -24,15 +33,13 @@ export async function action({request}) {
     return errores
   }
 
-
 }
 
 function NuevoCliente() {
 
-  // Action
+  // Action / useActionData -> cuando quieras obtener el resultado de un action
   const errores = useActionData()
   
-  // Loader
   const navigate = useNavigate()
 
   // Nos dirá los errores que hay
@@ -57,6 +64,7 @@ function NuevoCliente() {
 
         <Form
           method='post'
+          noValidate
         >
           <Formulario />
           
