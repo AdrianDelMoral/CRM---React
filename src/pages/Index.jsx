@@ -6,8 +6,6 @@ export function loader() {
 
   const clientes = ObtenerClientes()
 
-  console.log(import.meta.env);
-  
   return clientes
 }
 
