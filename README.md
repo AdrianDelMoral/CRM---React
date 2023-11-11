@@ -1,6 +1,16 @@
 # Technologies used in this project:
-
-## React + Vite + Json-Server + useLoaderData + useNavigate + Form + redirect + async / await + fetch + Layout + Outlet + Components
+- React
+- Vite
+- Json-Server
+- useLoaderData
+- useNavigate
+- Form
+- redirect
+- async / await
+- fetch 
+- Layout 
+- Outlet
+- Components
 
 In order to view the project and use it on your computer, you will need to have the following installed:
 
