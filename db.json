@@ -5,35 +5,40 @@
       "nombre": "Juan Roig",
       "telefono": 102013313,
       "email": "juan@juan.com",
-      "empresa": "Mercadona"
+      "empresa": "Mercadona",
+      "notas":"asdadsad"
     },
     {
       "id": 2,
       "nombre": "Karen",
       "telefono": 138198313,
       "email": "karen@gmail.com",
-      "empresa": "Karen y sus Gatos"
+      "empresa": "Karen y sus Gatos",
+      "notas":"asdadsad"
     },
     {
       "id": 3,
       "nombre": "Josue",
       "telefono": 31983913,
       "email": "josue@gmail.com",
-      "empresa": "Ladrillos Josue"
+      "empresa": "Ladrillos Josue",
+      "notas":"asdadsad"
     },
     {
       "id": 4,
       "nombre": "Miguel Angel Durán",
       "telefono": 319381983,
       "email": "miguel@gmail.com",
-      "empresa": "Midudev"
+      "empresa": "Midudev",
+      "notas":"asdadsad"
     },
     {
       "id": 5,
       "nombre": "Jose Miguel Garcia Garcia",
       "telefono": 1398198938,
       "email": "josemi@gmail.com",
-      "empresa": "Sales Emprendimientos"
+      "empresa": "Sales Emprendimientos",
+      "notas":"asdadsad"
     },
     {
       "nombre": "Adrián desde React",
