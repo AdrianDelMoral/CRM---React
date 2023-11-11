@@ -8,7 +8,7 @@ import Layout from './components/Layout'
 import NuevoCliente, { action as nuevoClienteAction } from './pages/NuevoCliente'
 import Index, { loader as clientesLoader } from './pages/Index'
 import ErrorPage from './components/ErrorPage'
-import EditarCliente, { loader as editarClienteLoader } from './pages/EditarCliente'
+import EditarCliente, { loader as editarClienteLoader, action as editarClienteAction} from './pages/EditarCliente'
 
 
 const router = createBrowserRouter([
@@ -20,19 +20,20 @@ const router = createBrowserRouter([
       {
         index: true, // Hace que en la página principal tome el layout, y ponga un elemento, para que ponga algo, debajo del titulo también
         element: <Index/>,
-        loader: clientesLoader,
+        loader: clientesLoader,/* Donde los obtenemos, solo es un loader para hacer una consulta */
         errorElement: <ErrorPage/>,
       },
       {
         path: '/clientes/nuevo',
         element: <NuevoCliente />,
-        action: nuevoClienteAction,
+        action: nuevoClienteAction,/* Cuando creamos un nuevo registro enviamos un action */
         errorElement: <ErrorPage/>,
       },
       {
         path: '/clientes/:clienteId/editar',
         element: <EditarCliente />,
-        loader: editarClienteLoader,
+        loader: editarClienteLoader,/* Loader para obtener cliente */
+        action: editarClienteAction,/* Action para pasarle los nuevos datos ingresados al formulario */
         errorElement: <ErrorPage/>,
       },
     ],

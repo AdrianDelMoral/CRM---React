@@ -1,36 +1,36 @@
 {
   "clientes": [
     {
-      "id": 1,
-      "nombre": "Juan Roig",
-      "telefono": 102013313,
-      "email": "juan@juan.com",
+      "nombre": "Juan Roig - Mercadona",
       "empresa": "Mercadona",
-      "notas":"asdadsad"
+      "email": "juan@juan.com",
+      "telefono": "102013313",
+      "notas": "Nueva nota",
+      "id": 1
     },
     {
-      "id": 2,
       "nombre": "Karen",
-      "telefono": 138198313,
-      "email": "karen@gmail.com",
       "empresa": "Karen y sus Gatos",
-      "notas":"asdadsad"
+      "email": "karen@gmail.com",
+      "telefono": "138198313",
+      "notas": "Quiere muchos gatos",
+      "id": 2
     },
     {
-      "id": 3,
       "nombre": "Josue",
-      "telefono": 31983913,
-      "email": "josue@gmail.com",
       "empresa": "Ladrillos Josue",
-      "notas":"asdadsad"
+      "email": "josue@gmail.com",
+      "telefono": "31983913",
+      "notas": "Le gusta trabajar mucho",
+      "id": 3
     },
     {
-      "id": 4,
       "nombre": "Miguel Angel Durán",
-      "telefono": 319381983,
-      "email": "miguel@gmail.com",
       "empresa": "Midudev",
-      "notas":"asdadsad"
+      "email": "miguel@gmail.com",
+      "telefono": "319381983",
+      "notas": "Es un gran divulgador de programación",
+      "id": 4
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "telefono": 1398198938,
       "email": "josemi@gmail.com",
       "empresa": "Sales Emprendimientos",
-      "notas":"asdadsad"
+      "notas": "asdadsad"
     },
     {
       "nombre": "Adrián desde React",
@@ -47,6 +47,14 @@
       "telefono": "212214",
       "notas": "El cliente desea un Ecommerce",
       "id": 6
+    },
+    {
+      "nombre": "Nostrum deserunt vol",
+      "empresa": "Vero est dolores ex",
+      "email": "gahujyv@mailinator.com",
+      "telefono": "+1 (178) 856-6909",
+      "notas": "Proident sit verit",
+      "id": 7
     }
   ]
 }
