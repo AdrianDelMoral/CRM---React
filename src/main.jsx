@@ -9,7 +9,7 @@ import NuevoCliente, { action as nuevoClienteAction } from './pages/NuevoCliente
 import Index, { loader as clientesLoader } from './pages/Index'
 import ErrorPage from './components/ErrorPage'
 import EditarCliente, { loader as editarClienteLoader, action as editarClienteAction} from './pages/EditarCliente'
-
+import { action as eliminarClienteAction } from './components/Cliente'
 
 const router = createBrowserRouter([
   // Rutas que van mediante un objeto
@@ -35,6 +35,10 @@ const router = createBrowserRouter([
         loader: editarClienteLoader,/* Loader para obtener cliente */
         action: editarClienteAction,/* Action para pasarle los nuevos datos ingresados al formulario */
         errorElement: <ErrorPage/>,
+      },
+      {
+        path: '/clientes/:clienteId/eliminar',
+        action: eliminarClienteAction,
       },
     ],
   },

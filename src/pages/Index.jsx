@@ -1,11 +1,15 @@
 import { useLoaderData } from "react-router-dom"
 import Cliente from "../components/Cliente";
-import { ObtenerClientes, ObtenerCliente } from "../data/Clientes";
+import { ObtenerClientes } from "../data/Clientes";
 
 export function loader() {
-
-  const clientes = ObtenerClientes()
-  
+  /**
+   * Se encarga de obtener los clientes, y los loaders 
+   * se encargan de tener sincronizado lo que tenemos en 
+   * pantalla con nuestra api, no hace falta ir al state 
+   * y que lo haga directamente
+   **/
+  const clientes = ObtenerClientes() 
   return clientes
 }
 
