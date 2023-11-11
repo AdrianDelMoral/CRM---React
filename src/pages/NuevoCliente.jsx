@@ -1,7 +1,8 @@
 // Permite navegar de forma programada, para que cuando se pulse un botón o después de pasar una validación poder navegar a otra página
-import { useNavigate, Form, useActionData } from "react-router-dom"
+import { useNavigate, Form, useActionData, redirect } from "react-router-dom"
 import Formulario from '../components/Formulario'
 import Error from "../components/Error"
+import { agregarCliente } from "../data/Clientes"
 
 export async function action({request}) {
   const formData = await request.formData()
@@ -29,10 +30,13 @@ export async function action({request}) {
   if(Object.keys(errores).length) {
     // console.log('Si hay errores');
     // console.log(Object.keys(errores)); // Si hay errores, nos devolverá un array de 0 ya que no hay nada escrito aún
-
     return errores
   }
-
+  
+  // Si llega hasta aqui es que ha pasado la validación
+  await agregarCliente(datos)
+  
+  return redirect('/')
 }
 
 function NuevoCliente() {

@@ -5,7 +5,7 @@ import { ObtenerClientes } from "../data/Clientes";
 export function loader() {
 
   const clientes = ObtenerClientes()
-
+  
   return clientes
 }
 

@@ -17,6 +17,7 @@ module.exports = {
     'react/prop-types': 'off',
     /* 'react/react-in-jsx-scope': 'off', */
     /* 'no-undef': 'off', */
+    'eslint-disable': 'no-control-regex',
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
